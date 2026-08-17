@@ -1,18 +1,77 @@
-# React + Vite
+# 🎮 GameZone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una SPA (Single Page Application) desarrollada con **React**, **React Router** y **Tailwind CSS** que funciona como catálogo de videojuegos. Los usuarios pueden explorar juegos, ver detalles de cada uno y navegar por categorías.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologías usadas
 
-## React Compiler
+- [React](https://react.dev/) — librería para construir interfaces
+- [React Router](https://reactrouter.com/) — manejo de rutas del lado del cliente
+- [Tailwind CSS](https://tailwindcss.com/) — framework CSS de clases de utilidad
+- [Vite](https://vitejs.dev/) — bundler y servidor de desarrollo
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## Estructura del proyecto
 
-## Expanding the ESLint configuration
+```
+src/
+├── components/
+│   ├── Navbar.jsx          # Barra de navegación compartida con NavLink
+│   ├── Card.jsx            # Card reutilizable para cada juego
+│   └── Footer.jsx          # Pie de página compartido
+├── data/
+│   └── contenidos.js       # Array de juegos y categorías (datos locales)
+├── layout/
+│   └── LayoutApp.jsx       # Layout con Navbar + Outlet + Footer
+├── routes/
+│   └── AppRouter.jsx       # Definición de rutas principales
+├── pages/
+│   ├── Home.jsx            # Pantalla de inicio con hero y destacados
+│   ├── Explorar.jsx        # Catálogo completo de juegos
+│   ├── Categorias.jsx      # Grilla de categorías/géneros
+│   ├── Detalle.jsx         # Detalle de un juego por ID
+│   ├── sobre.jsx           # Info sobre el proyecto
+│   └── NotFound.jsx        # Página de error 404
+├── index.css               # Importación de Tailwind CSS
+└── main.jsx                # Punto de entrada de la aplicación
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Rutas disponibles
+
+| Ruta | Vista | Descripción |
+|------|-------|-------------|
+| `/` | Home | Inicio con hero, categorías y juegos destacados |
+| `/explorar` | Explorar | Todos los juegos |
+| `/categorias` | Categorias | Grilla de categorías |
+| `/contenido/:id` | Detalle | Detalle de un juego por ID dinámico (`useParams`) |
+| `/sobre` | sobre | Información del proyecto |
+| `*` | NotFound | Página no encontrada |
+
+---
+
+## Cómo ejecutar el proyecto
+
+```bash
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
+```
+
+Abre [http://localhost:5173](http://localhost:5173) en el navegador.
+
+---
+
+## Conceptos clave aplicados
+
+- **Rutas anidadas**: uso de `<Route>` dentro de un `LayoutApp` común.
+- **Ruta dinámica**: parametrización `:id` para `Detalle`.
+- **`useParams`**: extracción de parámetros de la URL en React Router.
+- **`NavLink`**: estado `isActive` para resaltar la opción seleccionada.
+- **`Outlet`**: punto donde se renderizan las sub-rutas dentro del layout.
+- **Tailwind CSS**: estilado mediante clases utilitarias limpias y semánticas.
