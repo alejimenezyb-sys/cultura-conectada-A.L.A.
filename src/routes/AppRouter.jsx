@@ -1,9 +1,9 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Explorar from "../pages/Explorar";
 import Categorias from "../pages/Categorias";
 import Detalle from "../pages/Detalle";
-import Sobre from "../pages/sobre";
+import Sobre from "../pages/Sobre";
 import NotFound from "../pages/NotFound";
 import LayoutApp from "../layout/LayoutApp";
 

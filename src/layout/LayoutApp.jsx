@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 const LayoutApp = () => {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between">
+    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between overflow-x-hidden">
       <div>
         <Navbar />
         <main>

@@ -6,10 +6,10 @@ Una SPA (Single Page Application) desarrollada con **React**, **React Router** y
 
 ## Tecnologías usadas
 
-- [React](https://react.dev/) — librería para construir interfaces
-- [React Router](https://reactrouter.com/) — manejo de rutas del lado del cliente
-- [Tailwind CSS](https://tailwindcss.com/) — framework CSS de clases de utilidad
-- [Vite](https://vitejs.dev/) — bundler y servidor de desarrollo
+- React
+- React Router
+- Tailwind CSS
+- Vite
 
 ---
 
@@ -32,7 +32,7 @@ src/
 │   ├── Explorar.jsx        # Catálogo completo de juegos
 │   ├── Categorias.jsx      # Grilla de categorías/géneros
 │   ├── Detalle.jsx         # Detalle de un juego por ID
-│   ├── sobre.jsx           # Info sobre el proyecto
+│   ├── Sobre.jsx           # Info sobre el proyecto
 │   └── NotFound.jsx        # Página de error 404
 ├── index.css               # Importación de Tailwind CSS
 └── main.jsx                # Punto de entrada de la aplicación
@@ -42,30 +42,14 @@ src/
 
 ## Rutas disponibles
 
-| Ruta | Vista | Descripción |
-|------|-------|-------------|
-| `/` | Home | Inicio con hero, categorías y juegos destacados |
-| `/explorar` | Explorar | Todos los juegos |
-| `/categorias` | Categorias | Grilla de categorías |
-| `/contenido/:id` | Detalle | Detalle de un juego por ID dinámico (`useParams`) |
-| `/sobre` | sobre | Información del proyecto |
-| `*` | NotFound | Página no encontrada |
-
----
-
-## Cómo ejecutar el proyecto
-
-```bash
-# Instalar dependencias
-npm install
-
-# Iniciar servidor de desarrollo
-npm run dev
-```
-
-Abre [http://localhost:5173](http://localhost:5173) en el navegador.
-
----
+| Ruta             | Vista      | Descripción                                       |
+| ---------------- | ---------- | ------------------------------------------------- |
+| `/`              | Home       | Inicio con hero, categorías y juegos destacados   |
+| `/explorar`      | Explorar   | Todos los juegos                                  |
+| `/categorias`    | Categorias | Grilla de categorías                              |
+| `/contenido/:id` | Detalle    | Detalle de un juego por ID dinámico (`useParams`) |
+| `/sobre`         | Sobre      | Información del proyecto                          |
+| `*`              | NotFound   | Página no encontrada                              |
 
 ## Conceptos clave aplicados
 

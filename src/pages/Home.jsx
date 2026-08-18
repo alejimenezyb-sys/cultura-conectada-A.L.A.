@@ -7,8 +7,8 @@ const Home = () => {
     <section className="max-w-6xl mx-auto px-6 py-8">
       <h1 className="text-3xl font-bold text-white mb-2">Game Zone</h1>
       <p className="text-slate-400 mb-6">
-        Una plataforma donde los usuarios pueden descubrir diferentes
-        videojuegos actuales.
+        Una plataforma donde los usuarios pueden comprar diferentes videojuegos
+        disponibles en nuestra tienda.
       </p>
 
       <h2 className="text-xl font-semibold text-white mb-3">
@@ -18,7 +18,7 @@ const Home = () => {
         {categorias.map((cat) => (
           <li key={cat.id}>
             <Link
-              to="/explorar"
+              to={`/explorar?categoria=${encodeURIComponent(cat.nombre)}`}
               className="bg-slate-800 text-slate-200 hover:bg-indigo-600 hover:text-white px-3 py-1.5 rounded-full text-sm font-medium border border-slate-700 transition"
             >
               {cat.icono} {cat.nombre}

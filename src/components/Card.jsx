@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({ contenido }) => {
   return (
-    <div className="bg-slate-800 border border-slate-700 rounded-lg overflow-hidden flex flex-col justify-between">
+    <article className="bg-slate-800 border border-slate-700 rounded-lg overflow-hidden flex flex-col justify-between">
       <img
         src={contenido.imagen}
         alt={contenido.alt || contenido.titulo}
@@ -41,7 +41,7 @@ const Card = ({ contenido }) => {
           Ver más
         </Link>
       </div>
-    </div>
+    </article>
   );
 };
 
