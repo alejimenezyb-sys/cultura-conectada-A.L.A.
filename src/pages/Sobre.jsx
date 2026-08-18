@@ -1,4 +1,4 @@
-const Sobre = () => {
+const sobre = () => {
   return (
     <section className="max-w-4xl mx-auto px-6 py-8 space-y-6">
       <h1 className="text-3xl font-bold text-white mb-6">Sobre el proyecto</h1>
