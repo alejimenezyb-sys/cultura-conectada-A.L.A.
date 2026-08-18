@@ -15,7 +15,7 @@ const AppRouter = () => {
         <Route path="explorar" element={<Explorar />} />
         <Route path="categorias" element={<Categorias />} />
         <Route path="contenido/:id" element={<Detalle />} />
-        <Route path="sobre" element={<sobre />} />
+        <Route path="sobre" element={<Sobre />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
