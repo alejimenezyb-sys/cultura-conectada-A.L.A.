@@ -29,10 +29,10 @@ const Explorar = () => {
       <div className="flex flex-wrap items-center gap-2 mb-8">
         <button
           onClick={() => seleccionarCategoria("")}
-          className={`px-3 py-1.5 rounded-full text-xs font-medium border transition ${
+          className={`px-3 py-1.5 rounded-full text-xs font-medium border transition cursor-pointer ${
             !categoriaSeleccionada
               ? "bg-indigo-600 border-indigo-500 text-white"
-              : "bg-slate-800 border-slate-700 text-slate-300 hover:border-slate-600"
+              : "bg-slate-800 border-slate-700 text-slate-300 hover:bg-indigo-600 hover:text-white hover:border-indigo-500"
           }`}
         >
           Todos
@@ -41,10 +41,10 @@ const Explorar = () => {
           <button
             key={cat.id}
             onClick={() => seleccionarCategoria(cat.nombre)}
-            className={`px-3 py-1.5 rounded-full text-xs font-medium border transition ${
+            className={`px-3 py-1.5 rounded-full text-xs font-medium border transition cursor-pointer ${
               categoriaSeleccionada === cat.nombre
                 ? "bg-indigo-600 border-indigo-500 text-white"
-                : "bg-slate-800 border-slate-700 text-slate-300 hover:border-slate-600"
+                : "bg-slate-800 border-slate-700 text-slate-300 hover:bg-indigo-600 hover:text-white hover:border-indigo-500"
             }`}
           >
             {cat.icono} {cat.nombre}
